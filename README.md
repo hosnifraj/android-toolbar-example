@@ -2,8 +2,7 @@
 
 * * *
 
-### Set style no action bar
-
+### Set style no action bar and add style for toolbar
 
 ```xml
 <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -12,11 +11,17 @@
     <item name="colorAccent">@color/colorAccent</item>
 </style>
 ```
+```xml
+<style name="toolbarStyle" parent="Widget.AppCompat.Toolbar">
+    <item name="titleTextColor">#FFFFFF</item>        
+</style>
+```
 
 ### Add toolbar.xml to layouts
 
 ```xml
 <android.support.v7.widget.Toolbar
+    style="@style/toolbarStyle"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -33,3 +38,10 @@
     layout="@layout/toolbar"/>
 ```
 
+### Set your toolbar to be supportActionBar
+
+```java
+Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+toolbar.setTitle("Android Srbija");
+setSupportActionBar(toolbar);
+```
