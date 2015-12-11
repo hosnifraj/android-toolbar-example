@@ -13,15 +13,23 @@
 </style>
 ```
 
-### add toolbar.xml to layouts
-
+### Add toolbar.xml to layouts
 
 ```xml
-<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#3d3dff"
+    android:orientation="vertical">
 </android.support.v7.widget.Toolbar>
 ```
 
+### Include toolbar.xml to activity_main.xml
+
+```xml
+<include
+    android:id="@+id/toolbar"
+    layout="@layout/toolbar"/>
+```
 
